@@ -37,4 +37,18 @@ describe('local-bookstore routes', () => {
     const res = await request(app).get(`/api/v1/reviewers/${reviewer.id}`);
     expect(res.body).toEqual({ id: reviewer.id, ...reviewer });
   });
+
+  // UPDATE
+  it('updates a row by id in the reviewers table', async () => {
+    const reviewer = await Reviewer.insert(expected);
+    const res = await request(app)
+      .patch(`/api/v1/reviewers/${reviewer.id}`)
+      .send({ name: 'Noah Smyth' });
+    expect(res.body).toEqual({
+      id: reviewer.id,
+      ...expected,
+      name: 'Noah Smyth',
+    });
+  });
+  // DELETE
 });
