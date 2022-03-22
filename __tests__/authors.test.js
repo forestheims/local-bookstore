@@ -31,4 +31,11 @@ describe('local-bookstore routes', () => {
     const res = await request(app).get('/api/v1/authors');
     expect(res.body).toEqual([{ id: authors.id, ...authors }]);
   });
+
+  //SELECT BY ID
+  it('gets an author by id', async () => {
+    const author = await Author.insert(expected);
+    const res = await request(app).get(`/api/v1/authors/${author.id}`);
+    expect(res.body).toEqual({ id: author.id, ...author });
+  });
 });

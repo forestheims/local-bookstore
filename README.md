@@ -14,8 +14,8 @@
   - [x] GET ALL
   - [x] GET BY ID
 - authors
-  - [] INSERT
-  - [] GET ALL
+  - [x] INSERT
+  - [x] GET ALL
   - [] GET BY ID
 - books
   - [x] INSERT
