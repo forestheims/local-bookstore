@@ -22,7 +22,7 @@
   - [x] GET ALL
   - [x] GET BY ID
 - reviewers
-  - [] INSERT
+  - [x] INSERT
   - [] GET ALL
   - [] GET BY ID
   - [] UPDATE
