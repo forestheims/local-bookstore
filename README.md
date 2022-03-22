@@ -20,7 +20,7 @@
 - books
   - [x] INSERT
   - [x] GET ALL
-  - [] GET BY ID
+  - [x] GET BY ID
 - reviewers
   - [] INSERT
   - [] GET ALL
