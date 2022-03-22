@@ -16,18 +16,18 @@
 - authors
   - [x] INSERT
   - [x] GET ALL
-  - [] GET BY ID
+  - [x] GET BY ID
 - books
   - [x] INSERT
   - [x] GET ALL
   - [x] GET BY ID
 - reviewers
   - [x] INSERT
-  - [] GET ALL
-  - [] GET BY ID
-  - [] UPDATE
-  - [] DELETE
-  - reviews related to the reviewer MUST be deleted first
+  - [x] GET ALL
+  - [x] GET BY ID
+  - [x] UPDATE
+  - [x] DELETE
+    - reviews related to the reviewer MUST be deleted first
 - reviews
   - [] INSERT
   - [] GET ALL

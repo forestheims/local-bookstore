@@ -50,5 +50,11 @@ describe('local-bookstore routes', () => {
       name: 'Noah Smyth',
     });
   });
+
   // DELETE
+  it('deletes a row from the reviewers table', async () => {
+    const reviewer = await Reviewer.insert(expected);
+    const res = await request(app).delete(`/api/v1/reviewers/${reviewer.id}`);
+    expect(res.body).toEqual({ id: reviewer.id, ...expected });
+  });
 });
