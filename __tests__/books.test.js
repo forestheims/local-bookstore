@@ -2,6 +2,7 @@ const pool = require('../lib/utils/pool');
 const setup = require('../data/setup');
 const request = require('supertest');
 const app = require('../lib/app');
+const Book = require('../lib/models/Book');
 // const Book = require('../lib/models/Book');
 
 describe('local-bookstore routes', () => {
@@ -29,5 +30,12 @@ describe('local-bookstore routes', () => {
     await request(app).post('/api/v1/books').send(expected);
     const res = await request(app).get('/api/v1/books');
     expect(res.body).toEqual([{ id: expect.any(String), ...expected }]);
+  });
+
+  //GET BY ID
+  it('gets a book by ID', async () => {
+    const book = await Book.insert(expected);
+    const res = await request(app).get(`/api/v1/books/${book.id}`);
+    expect(res.body).toEqual({ id: expect.any(String), ...expected });
   });
 });
