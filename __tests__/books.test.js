@@ -23,4 +23,11 @@ describe('local-bookstore routes', () => {
     const res = await request(app).post('/api/v1/books').send(expected);
     expect(res.body).toEqual({ id: expect.any(String), ...expected });
   });
+
+  //GET ALL
+  it('gets all rows from books table', async () => {
+    await request(app).post('/api/v1/books').send(expected);
+    const res = await request(app).get('/api/v1/books');
+    expect(res.body).toEqual([{ id: expect.any(String), ...expected }]);
+  });
 });
