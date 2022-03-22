@@ -21,7 +21,7 @@ describe('local-bookstore routes', () => {
 
   // CREATE
   it('inserts a row into the publishers table', async () => {
-    const res = request(app).post('/api/v1/publishers').send(expected);
+    const res = await request(app).post('/api/v1/publishers').send(expected);
     expect(res.body).toEqual({ id: expect.any(String), ...expected });
   });
 });
