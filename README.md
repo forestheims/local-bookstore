@@ -9,27 +9,34 @@
 
 ## Tables
 
-- Publisher
-  - INSERT -
-  - GET ALL - [{ id, name }]
-  - GET BY ID - { id, name, city, state, country, **_books: [{ id, title }]_** }
-- Author
-  - GET ALL - [{ id, name }]
-  - GET BY ID - { name, dob, pob, \*\*\*books: [{ id, title, released }] }
-- Book
-  - GET ALL - [{ id, title, released, ***publisher: { id, name }*** }]
-  - GET BY ID - { title, released, **_publisher: { id, name }_**, **_authors: [{ id, name }]_**, **_reviews: [{ id, rating, review, reviewer: { id, name }]_**
-    }
-- Reviewer
-  - UPDATE - {}
-  - DELETE - {}
-    - reviews related to the reviewer MUST be deleted first
-- Review
+- publishers
+  - [x] INSERT
+  - [x] GET ALL
+  - [x] GET BY ID
+- authors
+  - [] INSERT
+  - [] GET ALL
+  - [] GET BY ID
+- books
+  - [x] INSERT
+  - [] GET ALL
+  - [] GET BY ID
+- reviewers
+  - [] INSERT
+  - [] GET ALL
+  - [] GET BY ID
+  - [] UPDATE
+  - [] DELETE
+  - reviews related to the reviewer MUST be deleted first
+- reviews
+  - [] INSERT
+  - [] GET ALL
+    - limit to top 100 highest rated
+- publishers_books
 
 ?? junction_tables
 
 - book_author
-- book_publisher
 - book_reviews
 
 ## Instance methods for joined tables
