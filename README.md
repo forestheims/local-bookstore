@@ -29,7 +29,7 @@
   - [x] DELETE
     - reviews related to the reviewer MUST be deleted first
 - reviews
-  - [] INSERT
+  - [x] INSERT
   - [] GET ALL
     - limit to top 100 highest rated
 - publishers_books
