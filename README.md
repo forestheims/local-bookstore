@@ -30,8 +30,8 @@
     - reviews related to the reviewer MUST be deleted first
 - reviews
   - [x] INSERT
-  - [] GET ALL
-    - limit to top 100 highest rated
+  - [x] GET ALL
+        -[]limit to top 100 highest rated
 - publishers_books
 
 ?? junction_tables
