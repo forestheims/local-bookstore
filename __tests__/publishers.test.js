@@ -37,6 +37,10 @@ describe('local-bookstore routes', () => {
   it('gets a publisher by id', async () => {
     const pub = await Publisher.insert(expected);
     const res = await request(app).get(`/api/v1/publishers/${pub.id}`);
-    expect(res.body).toEqual({ id: expect.any(String), ...expected });
+    expect(res.body).toEqual({
+      id: expect.any(String),
+      ...expected,
+      books: expect.any(Array),
+    });
   });
 });

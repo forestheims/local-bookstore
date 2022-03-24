@@ -18,13 +18,10 @@ CREATE TABLE publishers (
 CREATE TABLE books (
     id BIGINT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
     title TEXT NOT NULL,
+    publisher_id BIGINT REFERENCES publishers(id),
     released INT NOT NULL
 );
 
-CREATE TABLE authors_books (
-    authors_id BIGINT REFERENCES authors(id),
-    books_id BIGINT REFERENCES books(id)
-);
 
 CREATE TABLE authors (
     id BIGINT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
@@ -33,6 +30,10 @@ CREATE TABLE authors (
     pob TEXT 
 );
 
+CREATE TABLE authors_books (
+    authors_id BIGINT REFERENCES authors(id),
+    books_id BIGINT REFERENCES books(id)
+);
 CREATE TABLE reviewers (
      id BIGINT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
      name TEXT NOT NULL,
