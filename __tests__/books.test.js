@@ -52,6 +52,7 @@ describe('local-bookstore routes', () => {
       ...expected,
       publisher: { id: expect.any(String), name: 'Violet' },
       authors: expect.any(Array),
+      reviews: expect.any(Array),
     });
   });
 });
