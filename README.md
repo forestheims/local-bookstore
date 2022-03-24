@@ -30,7 +30,8 @@
     - [x] reviews related to the reviewer MUST be deleted first
 - reviews
   - [x] INSERT
-  - [x] GET ALL -[x]limit to top 100 highest rated
+  - [x] GET ALL
+    - [x] limit to top 100 highest rated
 - publishers_books
 
 ?? junction_tables
@@ -45,7 +46,8 @@
 - [x] getBooks
       -Books
 - [x] getPublisher
-- [] getAuthors
+  - [x] debugging
+- [x] getAuthors
 - [] getReviews(getReviewer?)
 
   -Authors
