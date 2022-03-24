@@ -48,7 +48,7 @@
 - [x] getPublisher
   - [x] debugging
 - [x] getAuthors
-- [] getReviews(getReviewer?)
+- [x] getReviews(getReviewer?)
 
   -Authors
 
