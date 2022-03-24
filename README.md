@@ -52,6 +52,6 @@
 
   -Authors
 
-- [] getBooks
+- [x] getBooks
   -Reviewers
 - [] getReviews
