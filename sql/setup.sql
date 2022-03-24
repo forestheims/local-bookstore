@@ -22,7 +22,6 @@ CREATE TABLE books (
     released INT NOT NULL
 );
 
-
 CREATE TABLE authors (
     id BIGINT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
     name TEXT NOT NULL,
@@ -34,6 +33,7 @@ CREATE TABLE authors_books (
     authors_id BIGINT REFERENCES authors(id),
     books_id BIGINT REFERENCES books(id)
 );
+
 CREATE TABLE reviewers (
      id BIGINT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
      name TEXT NOT NULL,

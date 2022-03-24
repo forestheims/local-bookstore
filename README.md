@@ -10,48 +10,44 @@
 ## Tables
 
 - publishers
+
   - [x] INSERT
   - [x] GET ALL
   - [x] GET BY ID
+
 - authors
+
   - [x] INSERT
   - [x] GET ALL
   - [x] GET BY ID
+
 - books
   - [x] INSERT
   - [x] GET ALL
   - [x] GET BY ID
+
+-authors_books
+
 - reviewers
+
   - [x] INSERT
   - [x] GET ALL
   - [x] GET BY ID
   - [x] UPDATE
   - [x] DELETE
     - [x] reviews related to the reviewer MUST be deleted first
+
 - reviews
   - [x] INSERT
   - [x] GET ALL
     - [x] limit to top 100 highest rated
-- publishers_books
 
-?? junction_tables
+## Instance methods
 
-- book_author
-- book_reviews
+-Publishers - [x] getBooks
 
-## Instance methods for joined tables
+-Books - [x] getPublisher - [x] debugging - [x] getAuthors - [x] getReviews(getReviewer?)
 
--Publishers
+-Authors - [x] getBooks
 
-- [x] getBooks
-      -Books
-- [x] getPublisher
-  - [x] debugging
-- [x] getAuthors
-- [x] getReviews(getReviewer?)
-
-  -Authors
-
-- [x] getBooks
-      -Reviewers
-- [x] getReviews
+-Reviewers - [x] getReviews
