@@ -45,4 +45,20 @@ describe('local-bookstore routes', () => {
     const res = await request(app).get('/api/v1/reviews');
     expect(res.body).toEqual([{ id: expect.any(String), ...expected }]);
   });
+
+  it('should limit reviews to 100', async () => {
+    await request(app).post('/api/v1/books').send({
+      title: 'Harry Poter',
+      released: 2001,
+    });
+    await request(app).post('/api/v1/reviewers').send({
+      name: 'noah',
+      company: 'Nike',
+    });
+    for (let i = 0; i < 111; i++) {
+      await request(app).post('/api/v1/reviews').send(expected);
+    }
+    const res = await request(app).get('/api/v1/reviews');
+    expect(res.body.length).toEqual(100);
+  });
 });
