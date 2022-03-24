@@ -39,3 +39,17 @@
 - book_reviews
 
 ## Instance methods for joined tables
+
+-Publishers
+
+- [x] getBooks
+      -Books
+- [x] getPublisher
+- [] getAuthors
+- [] getReviews(getReviewer?)
+
+  -Authors
+
+- [] getBooks
+  -Reviewers
+- [] getReviews
